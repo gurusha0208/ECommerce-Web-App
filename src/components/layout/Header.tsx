@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      width: '12ch',
+      width: '15ch',
       '&:focus': {
         width: '20ch',
       },
@@ -91,15 +91,16 @@ const Header: React.FC = () => {
   return (
     <AppBar position="sticky">
       <Toolbar>
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{ cursor: 'pointer' }}
-          onClick={() => navigate('/')}
-        >
-          ECommerce
-        </Typography>
-
+       <Box
+        sx={{ cursor: 'pointer' }}
+        onClick={() => navigate('/')}
+      >
+        <img
+          src="/logo.png" // replace with your logo file path
+          alt="GuruMart Logo"
+          style={{ height: '60px', width: 'auto', marginTop: 5 }} // adjust size as needed
+        />
+      </Box>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
           <form onSubmit={handleSearch}>
             <Search>

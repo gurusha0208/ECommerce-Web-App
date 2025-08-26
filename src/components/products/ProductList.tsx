@@ -27,7 +27,7 @@ const ProductList: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   
   const [searchCriteria, setSearchCriteria] = useState<SearchCriteria>({
-    searchTerm: searchParams.get('search') || '',
+    searchTerm: searchParams.get('search') || undefined,
     categoryId: searchParams.get('category') ? Number(searchParams.get('category')) : undefined,
     minPrice: searchParams.get('minPrice') ? Number(searchParams.get('minPrice')) : undefined,
     maxPrice: searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : undefined,

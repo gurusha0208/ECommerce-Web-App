@@ -16,6 +16,7 @@ import HomePage from './pages/HomePage';
 import CheckoutPage from './pages/CheckoutPage';
 import ProfilePage from './pages/Profilepage';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+import CategoriesPage from './pages/CategoriesPage';
 
 const theme = createTheme({
   palette: {
@@ -51,6 +52,7 @@ function AppContent() {
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
+          <Route path="/categories" element={<CategoriesPage />} />
           <Route
             path="/profile"
             element={

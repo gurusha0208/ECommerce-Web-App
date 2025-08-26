@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'linear-gradient(135deg, #667eea 0%, #874ab1 100%)',
           color: 'white',
           py: 8,
           mb: 6,
@@ -107,7 +107,7 @@ const HomePage: React.FC = () => {
             <Grid item xs={12} md={6}>
               <Box
                 component="img"
-                src="/hero-shopping.jpg"
+                src='/main_image.jpg'
                 alt="Shopping Hero"
                 sx={{
                   width: '100%',
@@ -116,7 +116,7 @@ const HomePage: React.FC = () => {
                   boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
                 }}
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://via.placeholder.com/600x400/667eea/white?text=Shop+Now';
+                  (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/667eea/ffffff?text=Shop+Now';
                 }}
               />
             </Grid>
@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
             <Grid item xs={12} sm={4}>
               <Paper sx={{ p: 3, textAlign: 'center', height: '100%' }}>
                 <TrendingUp sx={{ fontSize: 60, color: 'primary.main', mb: 2 }} />
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" gutterBottom >
                   Latest Trends
                 </Typography>
                 <Typography color="text.secondary">
