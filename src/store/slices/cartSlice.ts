@@ -2,13 +2,19 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Cart, CartItem } from '../../types';
 
 interface CartState {
-  cart: Cart | null;
+  cart: Cart ;
   isOpen: boolean;
   loading: boolean;
 }
 
 const initialState: CartState = {
-  cart: null,
+  cart: {
+    id: 1,            // or a temp UUID if you want
+    userId: 0,        // empty until a user logs in
+    updatedAt: new Date().toISOString(),
+    items: [],
+    totalItems: 0,
+    totalAmount: 0,},
   isOpen: false,
   loading: false,
 };
@@ -67,7 +73,14 @@ const cartSlice = createSlice({
       state.loading = action.payload;
     },
     clearCart: (state) => {
-      state.cart = null;
+      state.cart = {
+        id: 0,
+        userId: 0,
+        updatedAt: new Date().toISOString(),
+        items: [],
+        totalItems: 0,
+        totalAmount: 0,
+      };
     },
   },
 });
